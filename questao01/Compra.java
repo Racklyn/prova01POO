@@ -2,12 +2,12 @@ package questao01;
 import java.util.ArrayList;
 
 public class Compra {
-    private ArrayList<Produto> produtos = new ArrayList<Produto>();
+    private ArrayList<ProdutoItens> produtos = new ArrayList<ProdutoItens>();
     private double valorTotal;
 
-    void adicionaProduto(Produto produto){
-        produtos.add(produto);
-        valorTotal += produto.getValor();
+    void adicionaProduto(Produto produto, int quantidade){
+        produtos.add(new ProdutoItens(produto, quantidade));
+        valorTotal += produto.getValor() * quantidade;
     }
 
     void obterValorTotal(){
@@ -15,8 +15,8 @@ public class Compra {
     }
 
     void listarProdutos(){
-        for(int i = 0; i < produtos.size(); i++){
-            System.out.println(produtos.get(i).getNome());
+        for(ProdutoItens p: produtos){
+            System.out.println(p.getProduto().getNome() + " - " + p.getQuantidade() + " itens");
         }
     }
 }

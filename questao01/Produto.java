@@ -21,7 +21,7 @@ public class Produto {
     public double getValor(){
         return valor;
     }
-    public void setValor(){
+    public void setValor(double valor){
         this.valor = valor;
     }
 }

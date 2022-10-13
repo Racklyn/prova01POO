@@ -1,6 +1,6 @@
 package questao03;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         Login app = new Login();
         Usuario usuario = new Usuario("user", "123456789");

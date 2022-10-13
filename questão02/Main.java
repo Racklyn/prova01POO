@@ -1,6 +1,6 @@
 package questão02;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         Estacionamento estacionamento = new Estacionamento();
 
